@@ -105,3 +105,87 @@ html {
   color: rgba(255, 255, 255, 0.76);
   text-shadow: 0 6px 18px rgba(15, 23, 42, 0.35);
 }
+/* Refresco tema vibrante: gradientes energéticos y glassmorphism */
+body.theme-vibrant {
+  color: #f7f9ff;
+  background: radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.35) 0%, rgba(56, 189, 248, 0) 55%),
+    radial-gradient(circle at 88% 8%, rgba(236, 72, 153, 0.4) 0%, rgba(236, 72, 153, 0) 52%),
+    linear-gradient(135deg, #0f172a 0%, #1e3a8a 35%, #7c3aed 68%, #d946ef 100%);
+  background-attachment: fixed;
+  text-shadow: 0 0 14px rgba(15, 23, 42, 0.4);
+}
+
+body.theme-vibrant .container {
+  color: inherit;
+}
+
+body.theme-vibrant .card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.35);
+}
+
+body.theme-vibrant .card::before {
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.4) 0%, rgba(236, 72, 153, 0.1) 60%);
+  opacity: 0.65;
+  filter: blur(28px);
+}
+
+body.theme-vibrant h1,
+body.theme-vibrant h2,
+body.theme-vibrant h3,
+body.theme-vibrant .section-title,
+body.theme-vibrant .gradient-title {
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.45);
+}
+
+body.theme-vibrant p,
+body.theme-vibrant li,
+body.theme-vibrant span,
+body.theme-vibrant a {
+  color: rgba(248, 250, 252, 0.95);
+}
+
+body.theme-vibrant a:hover {
+  color: #fdfcff;
+  text-shadow: 0 0 12px rgba(236, 72, 153, 0.55);
+}
+
+body.theme-vibrant .btn {
+  color: #071326;
+  background: linear-gradient(120deg, #22d3ee 0%, #ec4899 52%, #facc15 100%);
+  border: none;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
+}
+
+body.theme-vibrant .btn:hover {
+  box-shadow: 0 26px 48px rgba(236, 72, 153, 0.35);
+  transform: translateY(-2px);
+}
+
+body.theme-vibrant .btn.btn--ghost {
+  color: rgba(248, 250, 252, 0.94);
+  background: linear-gradient(130deg, rgba(14, 165, 233, 0.25), rgba(244, 114, 182, 0.25));
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.28);
+}
+
+body.theme-vibrant .btn.btn--primary {
+  color: #050a1c;
+  background: linear-gradient(135deg, #22d3ee 0%, #7c3aed 45%, #f472b6 75%, #fde047 100%);
+  box-shadow: 0 24px 46px rgba(56, 189, 248, 0.4);
+}
+
+body.theme-vibrant .chip,
+body.theme-vibrant .tag {
+  color: #0b1120;
+  background: linear-gradient(145deg, rgba(244, 244, 245, 0.75), rgba(224, 231, 255, 0.45));
+  box-shadow: 0 14px 32px rgba(14, 165, 233, 0.28);
+}
+
+body.theme-vibrant footer {
+  color: rgba(241, 245, 249, 0.86);
+  text-shadow: 0 0 14px rgba(15, 23, 42, 0.5);
+}
