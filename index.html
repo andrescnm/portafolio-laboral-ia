@@ -1,13 +1,16 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Iván Darío Nastar Mora · Auditor & Contador Público</title>
-  <meta name="description" content="Portafolio profesional de Iván Darío Nastar Mora: Auditoría financiera y de procesos, SOX, SAGRILAFT, SARO, PTEE, NIIF/NIA, control interno y data analytics en sector financiero, seguros y retail." />
+  <meta name="description"
+    content="Portafolio profesional de Iván Darío Nastar Mora: Auditoría financiera y de procesos, SOX, SAGRILAFT, SARO, PTEE, NIIF/NIA, control interno y data analytics en sector financiero, seguros y retail." />
   <meta name="theme-color" content="#0f172a" />
   <meta property="og:title" content="Iván Darío Nastar Mora · Auditor & Contador Público" />
-  <meta property="og:description" content="Gestión de riesgos y control · SOX · SAGRILAFT · SARO · PTEE · Data Analytics" />
+  <meta property="og:description"
+    content="Gestión de riesgos y control · SOX · SAGRILAFT · SARO · PTEE · Data Analytics" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/og-preview.png" />
   <meta property="og:url" content="https://tu-repl-url/" />
@@ -27,97 +30,347 @@
   </script>
 
   <style>
-    :root{
+    :root {
       /* Paleta viva */
-      --bg-start: #0b1020; /* azul noche */
+      --bg-start: #0b1020;
+      /* azul noche */
       --bg-end: #0a1a2f;
       --text: #f8fafc;
-      --muted: #a5b4fc; /* indigo claro */
-      --indigo: #6366f1; /* primario */
-      --cyan: #06b6d4;   /* acento */
-      --rose: #f43f5e;   /* acento 2 */
-      --lime: #a3e635;   /* chip */
-      --card: rgba(255,255,255,.06);
-      --border: rgba(255,255,255,.12);
-      --shadow: 0 20px 50px rgba(2,6,23,.5);
+      --muted: #a5b4fc;
+      /* indigo claro */
+      --indigo: #6366f1;
+      /* primario */
+      --cyan: #06b6d4;
+      /* acento */
+      --rose: #f43f5e;
+      /* acento 2 */
+      --lime: #a3e635;
+      /* chip */
+      --card: rgba(255, 255, 255, .06);
+      --border: rgba(255, 255, 255, .12);
+      --shadow: 0 20px 50px rgba(2, 6, 23, .5);
       --radius: 20px;
       --radius-sm: 14px;
       --maxw: 1180px;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
-      min-height:100vh; overflow-x:hidden;
+    * {
+      box-sizing: border-box
     }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
     /* Fondo animado sutil */
-    .bg-anim{
-      position: fixed; inset: -40vmax; z-index: -1; filter: blur(80px); opacity:.7;
-      background: radial-gradient(40vmax 40vmax at 15% 15%, rgba(99,102,241,.35), transparent 60%),
-                  radial-gradient(38vmax 38vmax at 85% 20%, rgba(6,182,212,.35), transparent 60%),
-                  radial-gradient(30vmax 30vmax at 50% 90%, rgba(244,63,94,.35), transparent 60%);
+    .bg-anim {
+      position: fixed;
+      inset: -40vmax;
+      z-index: -1;
+      filter: blur(80px);
+      opacity: .7;
+      background: radial-gradient(40vmax 40vmax at 15% 15%, rgba(99, 102, 241, .35), transparent 60%),
+        radial-gradient(38vmax 38vmax at 85% 20%, rgba(6, 182, 212, .35), transparent 60%),
+        radial-gradient(30vmax 30vmax at 50% 90%, rgba(244, 63, 94, .35), transparent 60%);
       animation: float 24s ease-in-out infinite alternate;
     }
-    @keyframes float{ to{ transform: translate3d(2%, -2%, 0) rotate(1deg);} }
 
-    a{ color: var(--cyan); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+    @keyframes float {
+      to {
+        transform: translate3d(2%, -2%, 0) rotate(1deg);
+      }
+    }
 
-    .container{ max-width: var(--maxw); margin: 0 auto; padding: 28px; }
-    header{ display:grid; gap:18px; align-items:center; grid-template-columns: 110px 1fr; margin-top: 10px; }
-    .avatar{ width:110px; height:110px; border-radius: 24px; object-fit:cover; border:2px solid var(--border); box-shadow: var(--shadow); }
-    .title h1{ margin:0; font-size: clamp(28px, 4vw, 44px); letter-spacing:.2px; }
-    .subtitle{ margin-top:6px; color: var(--muted); font-size: 15px; }
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
 
-    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
-    .chip{ padding:8px 12px; border-radius:999px; font-size:13px; color:#0b1020; font-weight:700; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
-    .chip--lime{ background: linear-gradient(135deg,#d9f99d,#a3e635); }
-    .chip--blue{ background: linear-gradient(135deg,#93c5fd,#60a5fa); }
-    .chip--pink{ background: linear-gradient(135deg,#fda4af,#fb7185); }
+    a:hover {
+      text-decoration: underline;
+    }
 
-    nav{ margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; }
-    .btn{ display:inline-flex; gap:10px; align-items:center; padding:12px 16px; border-radius:14px; font-weight:700; letter-spacing:.2px; border:1px solid var(--border); color:#0b1020; background: #fff; }
-    .btn--primary{ color:#061118; background: linear-gradient(135deg,var(--indigo),var(--cyan)); border-color: transparent; box-shadow: 0 12px 30px rgba(6,182,212,.35); }
-    .btn--ghost{ color:var(--text); background: transparent; border-color: var(--border); }
-    .btn:hover{ transform: translateY(-1px) scale(1.01); filter: brightness(1.02); }
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px;
+    }
 
-    .grid{ display:grid; gap:22px; grid-template-columns: repeat(12, 1fr); margin-top: 24px; }
+    header {
+      display: grid;
+      gap: 18px;
+      align-items: center;
+      grid-template-columns: 110px 1fr;
+      margin-top: 10px;
+    }
 
-    .card{ position:relative; padding: 22px; border-radius: var(--radius); background: var(--card); border:1px solid var(--border); box-shadow: var(--shadow); overflow:hidden; }
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 24px;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: .2px;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #0b1020;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+    }
+
+    .chip--lime {
+      background: linear-gradient(135deg, #d9f99d, #a3e635);
+    }
+
+    .chip--blue {
+      background: linear-gradient(135deg, #93c5fd, #60a5fa);
+    }
+
+    .chip--pink {
+      background: linear-gradient(135deg, #fda4af, #fb7185);
+    }
+
+    nav {
+      margin-top: 16px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      border: 1px solid var(--border);
+      color: #0b1020;
+      background: #fff;
+    }
+
+    .btn--primary {
+      color: #061118;
+      background: linear-gradient(135deg, var(--indigo), var(--cyan));
+      border-color: transparent;
+      box-shadow: 0 12px 30px rgba(6, 182, 212, .35);
+    }
+
+    .btn--ghost {
+      color: var(--text);
+      background: transparent;
+      border-color: var(--border);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px) scale(1.01);
+      filter: brightness(1.02);
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 24px;
+    }
+
+    .card {
+      position: relative;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
     /* Glow multicolor */
-    .card::before{ content:""; position:absolute; inset:-2px; background: conic-gradient(from 180deg, var(--indigo), var(--cyan), var(--rose), var(--indigo)); filter: blur(18px) opacity(.25); z-index:-1; }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: conic-gradient(from 180deg, var(--indigo), var(--cyan), var(--rose), var(--indigo));
+      filter: blur(18px) opacity(.25);
+      z-index: -1;
+    }
 
-    .section-title{ margin:0 0 10px; font-size:22px; }
-    .gradient-title{ background: linear-gradient(90deg, var(--indigo), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .muted{ color:#cbd5e1; font-size: 14px; }
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
 
-    .about{ grid-column: span 6; }
-    .skills{ grid-column: span 6; }
-    .experience{ grid-column: span 7; }
-    .projects{ grid-column: span 5; }
-    .education{ grid-column: span 7; }
-    .contact{ grid-column: span 5; }
-    @media (max-width: 900px){ .about, .skills, .experience, .projects, .education, .contact{ grid-column: 1 / -1; } }
+    .gradient-title {
+      background: linear-gradient(90deg, var(--indigo), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
-    ul.clean{ list-style:none; padding:0; margin:0; }
-    ul.clean li{ padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.12); }
-    ul.clean li:last-child{ border-bottom:0; }
+    .muted {
+      color: #cbd5e1;
+      font-size: 14px;
+    }
 
-    details{ background: rgba(255,255,255,.04); border:1px solid var(--border); border-radius: var(--radius-sm); padding: 14px; margin: 12px 0; transition: all .2s ease; }
-    summary{ cursor:pointer; font-weight: 800; color:#e2e8f0; }
-    summary span{ color: #c7d2fe; font-weight: 700; }
-    details[open]{ outline: 2px solid rgba(99,102,241,.35); background: rgba(99,102,241,.08); }
+    .about {
+      grid-column: span 6;
+    }
 
-    .tags{ display:flex; gap:8px; flex-wrap: wrap; margin-top:8px; }
-    .tag{ background: rgba(6,182,212,.16); color:#e0f2fe; border:1px solid rgba(6,182,212,.35); font-size:12px; padding:6px 10px; border-radius:999px; }
+    .skills {
+      grid-column: span 6;
+    }
 
-    footer{ margin: 40px 0 10px; text-align:center; color: #9fb4ff; font-size: 13px; }
+    .experience {
+      grid-column: span 7;
+    }
 
-    @media print{ nav, .btn, .chips, .tags{ display:none !important; } body{ background:#fff; color:#000; } .card{ border:1px solid #333; box-shadow:none; } a{ color:#000; text-decoration: underline; } }
+    .projects {
+      grid-column: span 5;
+    }
+
+    .education {
+      grid-column: span 7;
+    }
+
+    .contact {
+      grid-column: span 5;
+    }
+
+    @media (max-width: 900px) {
+
+      .about,
+      .skills,
+      .experience,
+      .projects,
+      .education,
+      .contact {
+        grid-column: 1 / -1;
+      }
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.clean li {
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, .12);
+    }
+
+    ul.clean li:last-child {
+      border-bottom: 0;
+    }
+
+    details {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      margin: 12px 0;
+      transition: all .2s ease;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: #e2e8f0;
+    }
+
+    summary span {
+      color: #c7d2fe;
+      font-weight: 700;
+    }
+
+    details[open] {
+      outline: 2px solid rgba(99, 102, 241, .35);
+      background: rgba(99, 102, 241, .08);
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .tag {
+      background: rgba(6, 182, 212, .16);
+      color: #e0f2fe;
+      border: 1px solid rgba(6, 182, 212, .35);
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    footer {
+      margin: 40px 0 10px;
+      text-align: center;
+      color: #9fb4ff;
+      font-size: 13px;
+    }
+
+    @media print {
+
+      nav,
+      .btn,
+      .chips,
+      .tags {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      .card {
+        border: 1px solid #333;
+        box-shadow: none;
+      }
+
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="bg-anim"></div>
   <div class="container">
@@ -125,15 +378,18 @@
       <img class="avatar" src="/photos/avatar.png" alt="Foto de perfil de Iván Darío Nastar Mora" />
       <div class="title">
         <h1>Iván Darío Nastar Mora</h1>
-        <div class="subtitle">Auditor · Contador Público · Gestión de Riesgos y Control · SOX · SAGRILAFT · SARO · PTEE · Data Analytics</div>
+        <div class="subtitle">Auditor · Contador Público · Gestión de Riesgos y Control · SOX · SAGRILAFT · SARO · PTEE
+          · Data Analytics</div>
         <div class="chips">
           <span class="chip chip--lime">Bogotá D.C.</span>
           <span class="chip chip--blue">Financiero / Seguros / Retail</span>
           <span class="chip chip--pink">Híbrido / Remoto</span>
         </div>
         <nav>
-          <a class="btn btn--primary" href="mailto:ivandnastar@yahoo.es?subject=Contacto%20oportunidad%20laboral">Contactar</a>
-          <a class="btn btn--ghost" href="https://www.linkedin.com/in/ivan-dario-nastar-mora-55b82098" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--primary"
+            href="mailto:ivandnastar@yahoo.es?subject=Contacto%20oportunidad%20laboral">Contactar</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/ivan-dario-nastar-mora-55b82098" target="_blank"
+            rel="noopener">LinkedIn</a>
           <a class="btn btn--ghost" href="#proyectos">Casos prácticos</a>
         </nav>
       </div>
@@ -143,7 +399,10 @@
       <section class="about card">
         <h2 class="section-title gradient-title">Sobre mí</h2>
         <p>
-          Auditor financiero y de procesos con formación en Contaduría Pública, NIIF y NIA. Amplia experiencia en compañías vigiladas por la Superintendencia Financiera, en sectores financiero, seguros y retail. Enfoque en gestión de riesgos, control interno y mejora continua, apoyado en <strong>data analytics</strong> para la toma de decisiones y la mitigación de riesgos operativos, financieros y legales.
+          Auditor financiero y de procesos con formación en Contaduría Pública, NIIF y NIA. Amplia experiencia en
+          compañías vigiladas por la Superintendencia Financiera, en sectores financiero, seguros y retail. Enfoque en
+          gestión de riesgos, control interno y mejora continua, apoyado en <strong>data analytics</strong> para la toma
+          de decisiones y la mitigación de riesgos operativos, financieros y legales.
         </p>
         <div class="tags">
           <span class="tag">SOX</span>
@@ -159,11 +418,14 @@
       <section class="skills card">
         <h2 class="section-title gradient-title">Habilidades clave</h2>
         <ul class="clean">
-          <li><strong>Auditoría:</strong> planificación, ejecución y supervisión de planes; pruebas de controles y sustantivas; informes y seguimiento de planes de acción.</li>
-          <li><strong>Riesgos & Control:</strong> evaluación de riesgos, diseño/fortalecimiento de controles, cumplimiento de marcos SOX, SAGRILAFT, SARO, PTEE.</li>
+          <li><strong>Auditoría:</strong> planificación, ejecución y supervisión de planes; pruebas de controles y
+            sustantivas; informes y seguimiento de planes de acción.</li>
+          <li><strong>Riesgos & Control:</strong> evaluación de riesgos, diseño/fortalecimiento de controles,
+            cumplimiento de marcos SOX, SAGRILAFT, SARO, PTEE.</li>
           <li><strong>Normativo/Contable:</strong> NIIF y NIA en entidades vigiladas por SFC.</li>
           <li><strong>Analítica:</strong> Excel / Power BI / SQL básico para análisis y reportes ejecutivos.</li>
-          <li><strong>Liderazgo:</strong> coordinación de equipos, interlocución con alta dirección y entes de control.</li>
+          <li><strong>Liderazgo:</strong> coordinación de equipos, interlocución con alta dirección y entes de control.
+          </li>
         </ul>
       </section>
 
@@ -173,10 +435,12 @@
         <details open>
           <summary>Gerente de Auditoría · PwC <span> · 2024 – Actual</span></summary>
           <ul>
-            <li>Planificación y supervisión de auditorías para compañías vigiladas por la SFC (aseguradoras y bancos).</li>
+            <li>Planificación y supervisión de auditorías para compañías vigiladas por la SFC (aseguradoras y bancos).
+            </li>
             <li>Análisis integral de riesgos y propuestas de mejora para eficiencia y control interno.</li>
           </ul>
-          <div class="tags"><span class="tag">SOX</span><span class="tag">SFC</span><span class="tag">Control Interno</span></div>
+          <div class="tags"><span class="tag">SOX</span><span class="tag">SFC</span><span class="tag">Control
+              Interno</span></div>
         </details>
 
         <details>
@@ -185,7 +449,8 @@
             <li>Elaboración y ejecución del plan de auditoría interna.</li>
             <li>Identificación y cuantificación de riesgos por proceso; informes a Dirección Corporativa.</li>
           </ul>
-          <div class="tags"><span class="tag">Retail</span><span class="tag">Riesgos</span><span class="tag">Plan de Auditoría</span></div>
+          <div class="tags"><span class="tag">Retail</span><span class="tag">Riesgos</span><span class="tag">Plan de
+              Auditoría</span></div>
         </details>
 
         <details>
@@ -200,8 +465,10 @@
         <details>
           <summary>Senior de Auditoría · Deloitte & Touche Ltda. <span> · 2007 – 2014</span></summary>
           <ul>
-            <li>Auditoría financiera y de control interno en entidades vigiladas por SFC (aseguradoras, bancos, fiduciarias y comisionistas).</li>
-            <li>Ejecución SOX y estándares PCAOB; diseño de programas de trabajo y pruebas de controles/sustantivas.</li>
+            <li>Auditoría financiera y de control interno en entidades vigiladas por SFC (aseguradoras, bancos,
+              fiduciarias y comisionistas).</li>
+            <li>Ejecución SOX y estándares PCAOB; diseño de programas de trabajo y pruebas de controles/sustantivas.
+            </li>
           </ul>
           <div class="tags"><span class="tag">SOX</span><span class="tag">PCAOB</span><span class="tag">SFC</span></div>
         </details>
@@ -210,9 +477,12 @@
       <section id="proyectos" class="projects card">
         <h2 class="section-title gradient-title">Casos prácticos (muestras)</h2>
         <ul class="clean">
-          <li><strong>Mapa de riesgos por proceso</strong> · Matriz impacto/probabilidad y planes de acción priorizados.</li>
-          <li><strong>Monitoreo de controles clave</strong> · Tablero ejecutivo con estatus y tendencias de hallazgos.</li>
-          <li><strong>Automatización de reportes</strong> · Plantillas Excel/Power BI para cierres y KPIs de control.</li>
+          <li><strong>Mapa de riesgos por proceso</strong> · Matriz impacto/probabilidad y planes de acción priorizados.
+          </li>
+          <li><strong>Monitoreo de controles clave</strong> · Tablero ejecutivo con estatus y tendencias de hallazgos.
+          </li>
+          <li><strong>Automatización de reportes</strong> · Plantillas Excel/Power BI para cierres y KPIs de control.
+          </li>
         </ul>
         <p class="muted">¿Tienes evidencias o imágenes? Súbelas a <code>/proyectos/</code> y las enlazamos.</p>
       </section>
@@ -229,22 +499,27 @@
         <h2 class="section-title gradient-title">Contacto</h2>
         <ul class="clean">
           <li>Email: <a href="mailto:ivandnastar@yahoo.es">ivandnastar@yahoo.es</a></li>
-          <li>WhatsApp: <a href="https://wa.me/573023735391?text=Hola%20Iv%C3%A1n%2C%20vi%20tu%20portafolio" target="_blank" rel="noopener">+57 302 373 5391</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/ivan-dario-nastar-mora-55b82098" target="_blank" rel="noopener">/in/ivan-dario-nastar-mora-55b82098</a></li>
+          <li>WhatsApp: <a href="https://wa.me/573023735391?text=Hola%20Iv%C3%A1n%2C%20vi%20tu%20portafolio"
+              target="_blank" rel="noopener">+57 302 373 5391</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/ivan-dario-nastar-mora-55b82098" target="_blank"
+              rel="noopener">/in/ivan-dario-nastar-mora-55b82098</a></li>
           <li>Ubicación: Bogotá D.C., Colombia</li>
         </ul>
       </section>
     </main>
 
     <footer>
-      <small>© <span id="y"></span> Iván Darío Nastar Mora. Portafolio profesional. Última actualización: <span id="d"></span>.</small>
+      <small>© <span id="y"></span> Iván Darío Nastar Mora. Portafolio profesional. Última actualización: <span
+          id="d"></span>.</small>
     </footer>
   </div>
 
   <script>
     const now = new Date();
     document.getElementById('y').textContent = now.getFullYear();
-    document.getElementById('d').textContent = now.toLocaleDateString('es-CO', { year:'numeric', month:'long', day:'numeric' });
+    document.getElementById('d').textContent = now.toLocaleDateString('es-CO', {year: 'numeric', month: 'long', day: 'numeric'});
   </script>
+  <!-- build: sync test -->
 </body>
+
 </html>
